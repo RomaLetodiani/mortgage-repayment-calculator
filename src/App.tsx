@@ -1,7 +1,11 @@
+import MainCard from "./components/MainCard/Main.card";
+
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <div>
+      <MainCard />
+    </div>
+  );
+};
 
-export default App
+export default App;
