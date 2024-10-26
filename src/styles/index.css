@@ -11,6 +11,19 @@
   --slate-900: hsl(202, 55%, 16%);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--pjs-font-family);
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: var(--slate-500);
+}
+
 a {
   font-weight: 500;
   color: #646cff;
