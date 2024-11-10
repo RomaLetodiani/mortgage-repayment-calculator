@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --pjs-font-family: "Plus Jakarta Sans", sans-serif;
 
@@ -21,7 +25,6 @@ body {
   font-family: var(--pjs-font-family);
   font-size: 1rem;
   line-height: 1.5;
-  background-color: var(--slate-500);
 }
 
 a {
