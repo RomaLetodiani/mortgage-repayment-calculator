@@ -4,7 +4,7 @@ import LeftSideMain from "./components/LeftSide.main";
 
 const LeftSide = () => {
   return (
-    <div>
+    <div className="p-10">
       <LeftSideHeader />
       <LeftSideMain />
       <LeftSideFooter />
