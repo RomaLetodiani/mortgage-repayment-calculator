@@ -1,3 +1,4 @@
+import Label from "@/components/ui/Label";
 import useSearchParams from "@/hooks/useSP";
 
 const LeftSideMain = () => {
@@ -27,19 +28,19 @@ const LeftSideMain = () => {
   return (
     <div className="flex-1">
       <div>
-        <label htmlFor="amount">Mortgage Amount</label>
+        <Label htmlFor="amount" label="Mortgage Amount" />
         <input type="number" id="amount" onChange={handleAmountChange} value={amount} />
       </div>
       <div>
-        <label htmlFor="term">Mortgage Term</label>
+        <Label htmlFor="term" label="Mortgage Term" />
         <input type="number" id="term" onChange={handleTermChange} value={term} />
       </div>
       <div>
-        <label htmlFor="rate">Interest Rate</label>
+        <Label htmlFor="rate" label="Interest Rate" />
         <input type="number" id="rate" onChange={handleRateChange} value={rate} />
       </div>
       <div>
-        <label htmlFor="repayment">Mortgage Type</label>
+        <Label htmlFor="repayment" label="Mortgage Type" />
         <div>
           <input
             type="radio"
