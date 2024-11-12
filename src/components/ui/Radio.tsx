@@ -19,20 +19,24 @@ const Radio = ({
       <label
         htmlFor={props.id}
         className={twMerge(
-          "flex cursor-pointer items-center gap-5 rounded border border-slate-900 px-4 py-2",
-          props.checked ? "border-lime bg-lime/10" : "",
-          labelClassName,
+          "flex items-center gap-5 rounded px-4 py-2",
+          "border border-slate-700",
+          props.checked ? "border-lime bg-lime/10" : "cursor-pointer",
         )}
       >
         <input
           type="radio"
-          className={twMerge(
-            "cursor-pointer text-lime focus:ring-lime",
-            className,
-          )}
+          className={twMerge("text-lime focus:ring-lime", className)}
           {...props}
         />
-        <span className="text-sm font-semibold text-slate-900">{label}</span>
+        <span
+          className={twMerge(
+            "text-sm font-semibold text-slate-900",
+            labelClassName,
+          )}
+        >
+          {label}
+        </span>
       </label>
     </div>
   );
