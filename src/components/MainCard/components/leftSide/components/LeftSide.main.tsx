@@ -1,3 +1,4 @@
+import Input from "@/components/ui/Input";
 import Label from "@/components/ui/Label";
 import Radio from "@/components/ui/Radio";
 import useSearchParams from "@/hooks/useSP";
@@ -28,31 +29,34 @@ const LeftSideMain = () => {
 
   return (
     <div className="my-8 flex-1">
-      <div>
-        <Label htmlFor="amount" label="Mortgage Amount" />
-        <input
+      <Input
+        type="number"
+        min={0}
+        label="Mortgage Amount"
+        id="amount"
+        onChange={handleAmountChange}
+        value={amount}
+        prefix="₾"
+      />
+
+      <div className="my-5 grid grid-cols-2 gap-5">
+        <Input
           type="number"
-          id="amount"
-          onChange={handleAmountChange}
-          value={amount}
-        />
-      </div>
-      <div>
-        <Label htmlFor="term" label="Mortgage Term" />
-        <input
-          type="number"
+          min={0}
+          label="Mortgage Term"
           id="term"
           onChange={handleTermChange}
           value={term}
+          suffix="years"
         />
-      </div>
-      <div>
-        <Label htmlFor="rate" label="Interest Rate" />
-        <input
+        <Input
           type="number"
+          min={0}
+          label="Interest Rate"
           id="rate"
           onChange={handleRateChange}
           value={rate}
+          suffix="%"
         />
       </div>
       <div>
