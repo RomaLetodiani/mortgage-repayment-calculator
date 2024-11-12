@@ -4,7 +4,7 @@ import LeftSideMain from "./components/LeftSide.main";
 
 const LeftSide = () => {
   return (
-    <div className="p-10">
+    <div className="px-5 py-6 sm:p-10 flex flex-1 flex-col">
       <LeftSideHeader />
       <LeftSideMain />
       <LeftSideFooter />

@@ -1,5 +1,5 @@
 const LeftSideMain = () => {
-  return <div>LeftSideMain</div>;
+  return <div className="flex-1">LeftSideMain</div>;
 };
 
 export default LeftSideMain;
