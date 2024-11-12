@@ -3,7 +3,7 @@ import CompletedRender from "./components/Completed.render";
 import EmptyRender from "./components/Empty.render";
 
 const RightSide = () => {
-  const [searchParams] = useSearchParams();
+  const { searchParams } = useSearchParams();
   const completed = searchParams.completed === "true";
 
   return (

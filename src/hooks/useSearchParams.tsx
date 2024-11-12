@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 type SearchParams = Record<string, string | null>;
 
 // Define the custom hook with TypeScript
-function useSearchParams(): [SearchParams, (newParams: Partial<SearchParams>) => void] {
+const useSearchParams = () => {
   const [searchParams, setSearchParams] = useState<SearchParams>(() => {
     const params = new URLSearchParams(window.location.search);
     return Object.fromEntries(params.entries());
@@ -30,6 +30,13 @@ function useSearchParams(): [SearchParams, (newParams: Partial<SearchParams>) =>
     setSearchParams(Object.fromEntries(params.entries()));
   };
 
+  const clearSearchParams = () => {
+    const params = new URLSearchParams(window.location.search);
+    params.forEach((_, key) => params.delete(key));
+    window.history.pushState({}, "", window.location.pathname);
+    setSearchParams({});
+  };
+
   useEffect(() => {
     const handlePopState = () => {
       const params = new URLSearchParams(window.location.search);
@@ -41,7 +48,7 @@ function useSearchParams(): [SearchParams, (newParams: Partial<SearchParams>) =>
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
-  return [searchParams, updateSearchParams];
-}
+  return { searchParams, updateSearchParams, clearSearchParams };
+};
 
 export default useSearchParams;
