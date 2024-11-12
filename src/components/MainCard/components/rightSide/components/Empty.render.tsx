@@ -2,7 +2,7 @@ import illustrationEmpty from "@/assets/images/illustration-empty.svg";
 
 const EmptyRender = () => {
   return (
-    <div className="flex justify-center flex-col">
+    <div className="flex justify-center items-center h-full flex-col">
       <div className="flex justify-center">
         <img src={illustrationEmpty} alt="Empty" />
       </div>

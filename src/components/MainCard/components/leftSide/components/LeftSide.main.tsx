@@ -1,4 +1,5 @@
 import Label from "@/components/ui/Label";
+import Radio from "@/components/ui/Radio";
 import useSearchParams from "@/hooks/useSP";
 
 const LeftSideMain = () => {
@@ -26,7 +27,7 @@ const LeftSideMain = () => {
   const type = searchParams.get("type") || "";
 
   return (
-    <div className="flex-1">
+    <div className="flex-1 my-8">
       <div>
         <Label htmlFor="amount" label="Mortgage Amount" />
         <input type="number" id="amount" onChange={handleAmountChange} value={amount} />
@@ -41,26 +42,21 @@ const LeftSideMain = () => {
       </div>
       <div>
         <Label htmlFor="repayment" label="Mortgage Type" />
-        <div>
-          <input
-            type="radio"
-            id="repayment"
-            value="repayment"
-            onChange={handleTypeChange}
-            checked={type === "repayment"}
-          />
-          <label htmlFor="repayment">Repayment</label>
-        </div>
-        <div>
-          <input
-            type="radio"
-            id="interest-only"
-            value="interest-only"
-            onChange={handleTypeChange}
-            checked={type === "interest-only"}
-          />
-          <label htmlFor="interest-only">Interest Only</label>
-        </div>
+
+        <Radio
+          label="Repayment"
+          id="repayment"
+          value="repayment"
+          onChange={handleTypeChange}
+          checked={type === "repayment"}
+        />
+        <Radio
+          label="Interest Only"
+          id="interest-only"
+          value="interest-only"
+          onChange={handleTypeChange}
+          checked={type === "interest-only"}
+        />
       </div>
     </div>
   );
