@@ -1,4 +1,4 @@
-import useSearchParams from "@/hooks/useSearchParams";
+import useSearchParams from "@/hooks/useSP";
 
 const LeftSideHeader = () => {
   const { clearSearchParams } = useSearchParams();

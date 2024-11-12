@@ -1,4 +1,4 @@
-import useSearchParams from "@/hooks/useSearchParams";
+import useSearchParams from "@/hooks/useSP";
 
 const LeftSideMain = () => {
   const { searchParams, updateSearchParams } = useSearchParams();
@@ -19,10 +19,10 @@ const LeftSideMain = () => {
     updateSearchParams({ type: event.target.value });
   };
 
-  const amount = searchParams.amount || "";
-  const term = searchParams.term || "";
-  const rate = searchParams.rate || "";
-  const type = searchParams.type || "";
+  const amount = searchParams.get("amount") || "";
+  const term = searchParams.get("term") || "";
+  const rate = searchParams.get("rate") || "";
+  const type = searchParams.get("type") || "";
 
   return (
     <div className="flex-1">
