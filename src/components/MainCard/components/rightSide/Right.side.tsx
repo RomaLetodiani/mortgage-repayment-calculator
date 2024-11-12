@@ -7,7 +7,7 @@ const RightSide = () => {
   const completed = searchParams.get("completed") === "true";
 
   return (
-    <div className="px-5 py-6 md:p-9 bg-slate-900 md:rounded-bl-[4.5rem]">
+    <div className="bg-slate-900 px-5 py-6 md:rounded-bl-[4.5rem] md:p-9">
       {completed ? <CompletedRender /> : <EmptyRender />}
     </div>
   );

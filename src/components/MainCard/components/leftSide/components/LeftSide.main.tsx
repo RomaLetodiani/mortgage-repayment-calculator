@@ -27,18 +27,33 @@ const LeftSideMain = () => {
   const type = searchParams.get("type") || "";
 
   return (
-    <div className="flex-1 my-8">
+    <div className="my-8 flex-1">
       <div>
         <Label htmlFor="amount" label="Mortgage Amount" />
-        <input type="number" id="amount" onChange={handleAmountChange} value={amount} />
+        <input
+          type="number"
+          id="amount"
+          onChange={handleAmountChange}
+          value={amount}
+        />
       </div>
       <div>
         <Label htmlFor="term" label="Mortgage Term" />
-        <input type="number" id="term" onChange={handleTermChange} value={term} />
+        <input
+          type="number"
+          id="term"
+          onChange={handleTermChange}
+          value={term}
+        />
       </div>
       <div>
         <Label htmlFor="rate" label="Interest Rate" />
-        <input type="number" id="rate" onChange={handleRateChange} value={rate} />
+        <input
+          type="number"
+          id="rate"
+          onChange={handleRateChange}
+          value={rate}
+        />
       </div>
       <div>
         <Label htmlFor="repayment" label="Mortgage Type" />

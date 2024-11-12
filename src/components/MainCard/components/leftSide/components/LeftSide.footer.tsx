@@ -20,9 +20,13 @@ const LeftSideFooter = () => {
     <div>
       <button
         onClick={handleCalculateRepayments}
-        className="rounded-full w-full md:w-max bg-lime hover:scale-105 py-2 px-5 flex justify-center items-center font-bold transition-transform duration-300 ease-in-out"
+        className="flex w-full items-center justify-center rounded-full bg-lime px-5 py-2 font-bold transition-transform duration-300 ease-in-out hover:scale-105 md:w-max"
       >
-        <img src={calculatorSVG} alt="Calculator" className="w-5 h-5 inline-block mr-2" />
+        <img
+          src={calculatorSVG}
+          alt="Calculator"
+          className="mr-2 inline-block h-5 w-5"
+        />
         <span>Calculate Repayments</span>
       </button>
     </div>
